@@ -1,1 +1,94 @@
-Hola Mundo
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" href="https://res.cloudinary.com/entiras/image/upload/v1587691638/favicon2_yftwqz.ico">
+    {{ style('style') }}
+    <title>EnTiras</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-entiras-primary border-bottom border-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="https://res.cloudinary.com/entiras/image/upload/v1587691638/logo_qegnqt.svg" alt="EnTiras"
+                    class="entiras-brand">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">
+                            <img draggable="false" class="emoji" alt="&#x1F512;"
+                                src="https://twemoji.maxcdn.com/v/12.1.5/72x72/1f512.png">
+                            Entrar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="jumbotron bg-entiras-focus-1">
+            <div class="row">
+                <div class="col-md">
+                    <img src="https://res.cloudinary.com/entiras/image/upload/v1587691638/registrate_qjx64q.svg"
+                        class="mx-auto my-4 d-block img-fluid" alt="Registrate :V">
+                </div>
+                <div class="col-md">
+                    <div class="card bg-entiras-dark text-light">
+                        <div class="card-body">
+                            <form action="/api/signup" method="POST">
+                                <div class="form-group">
+                                    <label>
+                                        Direcci&oacute;n de Correo
+                                    </label>
+                                    <input type="text" name="email"
+                                        class="form-control"
+                                        placeholder="ejemplo@ejemplo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        Nombre de Usuario
+                                    </label>
+                                    <input type="text" name="username"
+                                        class="form-control"
+                                        placeholder="usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        Contrase&ntilde;a
+                                    </label>
+                                    <input type="password" name="password"
+                                        class="form-control"
+                                        placeholder="4 caracteres m&iacute;nimo">
+                                </div>
+                                <button class="btn btn-outline-secondary btn-block" type="submit">
+                                    Registrarse
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
