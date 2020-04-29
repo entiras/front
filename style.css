@@ -5,7 +5,7 @@
   background-color: #fd772d;
 }
 .bg-entiras-dark {
-  background-color: rgba(0, 0, 0, 0.7)
+  background-color: rgba(0, 0, 0, 0.5)
 }
 .card-body a, .card-body a:hover {
   color: #fd772d;
@@ -66,13 +66,40 @@
 .icon-lock:before {
   content: "\e901";
 }
+.icon-hourglass:before {
+  content: "\e902";
+}
 @font-face {
   font-family: 'desyrelregular';
-  src: url('fonts/desyrel.woff2') format('woff2'),
-    url('fonts/desyrel.woff') format('woff');
+  src: url('https://res.cloudinary.com/entiras/raw/upload/v1588187690/desyrel_iwosvz.woff2') format('woff2'),
+    url('https://res.cloudinary.com/entiras/raw/upload/v1588187690/desyrel_aju6af.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 .h-entiras {
   font-family: 'desyrelregular' !important;
+}
+.rotate-center {
+	-webkit-animation: rotate-center 1s linear infinite both;
+	        animation: rotate-center 1s linear infinite both;
+}
+ @-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
