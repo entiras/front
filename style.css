@@ -42,9 +42,9 @@
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?b60jdf');
   src:  url('fonts/icomoon.eot?b60jdf#iefix') format('embedded-opentype'),
-  url('fonts/icomoon.ttf?b60jdf') format('truetype'),
-  url('fonts/icomoon.woff?b60jdf') format('woff'),
-  url('fonts/icomoon.svg?b60jdf#icomoon') format('svg');
+    url('fonts/icomoon.ttf?b60jdf') format('truetype'),
+    url('fonts/icomoon.woff?b60jdf') format('woff'),
+    url('fonts/icomoon.svg?b60jdf#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -65,4 +65,14 @@
 }
 .icon-lock:before {
   content: "\e901";
+}
+@font-face {
+  font-family: 'desyrelregular';
+  src: url('fonts/desyrel.woff2') format('woff2'),
+    url('fonts/desyrel.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.h-entiras {
+  font-family: 'desyrelregular' !important;
 }
