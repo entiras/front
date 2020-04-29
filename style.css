@@ -39,37 +39,6 @@
   background-image: url('https://res.cloudinary.com/entiras/image/upload/v1587763727/carton_glsjt5.jpg');
 }
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?b60jdf');
-  src:  url('fonts/icomoon.eot?b60jdf#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?b60jdf') format('truetype'),
-    url('fonts/icomoon.woff?b60jdf') format('woff'),
-    url('fonts/icomoon.svg?b60jdf#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-bars:before {
-  content: "\e900";
-}
-.icon-lock:before {
-  content: "\e901";
-}
-.icon-hourglass:before {
-  content: "\e902";
-}
-@font-face {
   font-family: 'desyrelregular';
   src: url('https://res.cloudinary.com/entiras/raw/upload/v1588187690/desyrel_iwosvz.woff2') format('woff2'),
     url('https://res.cloudinary.com/entiras/raw/upload/v1588187690/desyrel_aju6af.woff') format('woff');
@@ -102,4 +71,35 @@
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?dntnb7');
+  src:  url('fonts/icomoon.eot?dntnb7#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dntnb7') format('truetype'),
+    url('fonts/icomoon.woff?dntnb7') format('woff'),
+    url('fonts/icomoon.svg?dntnb7#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-hourglass:before {
+  content: "\e902";
+}
+.icon-bars:before {
+  content: "\e900";
+}
+.icon-lock:before {
+  content: "\e901";
 }
