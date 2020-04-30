@@ -1,10 +1,18 @@
 var loader = {};
+loader.active = false;
 loader.show = function () {
-    $('#loader').removeClass('d-none');
+    loader.active = true;
+    setTimeout(loader.wait, 500);
 };
 loader.hide = function () {
+    loader.active = false;
     $('#loader').addClass('d-none');
 };
+loader.wait = function () {
+    if (loader.active) {
+        $('#loader').removeClass('d-none');
+    }
+}
 var login = {};
 login.logged = false;
 login.check = function () {
@@ -23,6 +31,7 @@ login.checked = function () {
     }
 };
 login.failed = function () {
+    loader.hide();
     $('#network-err').removeClass('d-none');
 };
 var content = {};
