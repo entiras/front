@@ -2,7 +2,7 @@ var loader = {};
 loader.active = false;
 loader.show = function () {
     loader.active = true;
-    setTimeout(loader.wait, 300);
+    setTimeout(loader.wait, 500);
 };
 loader.hide = function () {
     loader.active = false;
