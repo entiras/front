@@ -9,7 +9,7 @@ var login = {};
 login.logged = false;
 login.check = function () {
     $.ajax({
-        type: 'POST',
+        type: 'GET',
         url: 'https://entiras.herokuapp.com/',
         success: login.checked,
         error: login.failed
