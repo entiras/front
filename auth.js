@@ -47,7 +47,9 @@ content.guest = function () {
     $('.guest').removeClass('d-none');
 };
 content.view = function () {
-    console.log(window.location.href);
+    var url = new URL(window.location.href);
+    var route = url.pathname;
+    console.log(route);
 }
 $(document).ready(function () {
     loader.show();
