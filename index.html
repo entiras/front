@@ -58,10 +58,10 @@
             </div>
         </div>
         <div id="signup" class="d-none">
-            <span class="h1 h-entiras ml-4">Registro</span>
+            <span class="h1 h-entiras ml-4 mt-2">Registro</span>
             <div class="row">
                 <div class="col-lg">
-                    <div class="card mt-2">
+                    <div class="card border-primary">
                         <div class="card-body">
                             <form action="/api/login" method="POST">
                                 <input type="hidden" name="_csrf">
@@ -93,13 +93,17 @@
                     </div>
                 </div>
                 <div class="col-lg">
-                    <p>
-                        Después del registro se enviará un correo de confirmación para activar la cuenta
-                    </p>
-                    <p>
-                        Si ya tienes una cuenta, intenta
-                        <a href="/login">iniciar sesión</a>
-                    </p>
+                    <div class="card">
+                        <div class="card-body">
+                            <p>
+                                Después del registro se enviará un correo de confirmación para activar la cuenta
+                            </p>
+                            <p>
+                                Si ya tienes una cuenta, intenta
+                                <a href="/login">iniciar sesión</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
