@@ -1,3 +1,4 @@
+// loader message
 var loader = {};
 loader.active = false;
 loader.show = function () {
@@ -13,6 +14,7 @@ loader.wait = function () {
         $('#loader').removeClass('d-none');
     }
 }
+// check if logged in
 var login = {};
 login.logged = false;
 login.check = function () {
@@ -34,6 +36,7 @@ login.failed = function () {
     loader.hide();
     $('#network-err').removeClass('d-none');
 };
+// show content depending on log and view
 var content = {};
 content.logged = function () {
     loader.hide();
@@ -43,7 +46,11 @@ content.guest = function () {
     loader.hide();
     $('.guest').removeClass('d-none');
 };
+content.view = function () {
+    console.log(window.location.href);
+}
 $(document).ready(function () {
     loader.show();
     login.check();
+    content.view();
 });
