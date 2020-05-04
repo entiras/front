@@ -50,6 +50,7 @@ a, a:hover {
 }
 .big {
   font-size: 10rem;
+  color: #074c97;
 }
 @font-face {
   font-family: 'icomoon';
