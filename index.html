@@ -37,22 +37,35 @@
     </nav>
     <div class="container mt-4">
         <div id="loader" class="alert alert-info d-none animated fadeIn faster" role="alert">
-            <span class="icon-hourglass"></span> Perdon, esto tardará un poco...
+            <span class="icon-hourglass"></span> Disculpa, esto tardará un poco...
         </div>
         <div id="network-err" class="alert alert-danger d-none animated fadeIn faster" role="alert">
             Hubo un error de red
         </div>
-        <div class="jumbotron bg-entiras-focus-1 d-none animated fadeIn faster guest">
-            <div class="card bg-entiras-dark text-light">
-                <div class="card-body">
-                    <p class="h1 h-entiras text-right">Hola :V</p>
-                    <p class="text-right">
-                        <a href="/signup">Registrate</a>
-                        para poder publicar tus propias tiras en español.
-                        A menos que ya tengas una
-                        <a href="/login">cuenta</a>.
-                    </p>
+        <div id="home" class="d-none">
+            <div class="jumbotron bg-entiras-focus-1 d-none animated fadeIn faster guest">
+                <div class="card bg-entiras-dark text-light">
+                    <div class="card-body">
+                        <p class="h1 h-entiras text-right">Hola :V</p>
+                        <p class="text-right">
+                            <a href="/signup">Registrate</a>
+                            para poder publicar tus propias tiras en español.
+                            A menos que ya tengas una
+                            <a href="/login">cuenta</a>.
+                        </p>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div id="signup" class="d-none">
+            Signup
+        </div>
+        <div id="login" class="d-none">
+            Login
+        </div>
+        <div id="notfound" class="d-none">
+            <div class="alert alert-danger" role="alert">
+                Esa ruta no existe
             </div>
         </div>
     </div>
@@ -63,7 +76,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="auth.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

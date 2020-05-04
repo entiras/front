@@ -49,7 +49,19 @@ content.guest = function () {
 content.view = function () {
     var url = new URL(window.location.href);
     var route = url.pathname;
-    console.log(route);
+    switch (route) {
+        case '/':
+            $('#home').removeClass('d-none');
+            break;
+        case '/signup':
+            $('#signup').removeClass('d-none');
+            break;
+        case '/login':
+            $('#login').removeClass('d-none');
+            break;
+        default:
+            $('#404').removeClass('d-none');
+    }
 }
 $(document).ready(function () {
     loader.show();
