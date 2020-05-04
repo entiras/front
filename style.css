@@ -48,6 +48,9 @@ a, a:hover {
 .h-entiras {
   font-family: 'desyrelregular' !important;
 }
+.big {
+  font-size: 10rem;
+}
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?mh8zzq');
