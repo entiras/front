@@ -60,7 +60,7 @@ content.view = function () {
             $('#login').removeClass('d-none');
             break;
         default:
-            $('#404').removeClass('d-none');
+            $('#notfound').removeClass('d-none');
     }
 }
 $(document).ready(function () {
