@@ -59,33 +59,41 @@
         </div>
         <div id="signup" class="d-none">
             <span class="h1 h-entiras">Registro</span>
-            <div class="card mt-2">
-                <div class="card-body">
-                    <form action="/api/login" method="POST">
-                        <input type="hidden" name="_csrf">
-                        <div class="form-group">
-                            <label>
-                                Dirección de Correo
-                            </label>
-                            <input type="text" name="email" class="form-control" placeholder="ejemplo@ejemplo.com">
+            <div class="row">
+                <div class="col-md">
+                    <div class="card mt-2">
+                        <div class="card-body">
+                            <form action="/api/login" method="POST">
+                                <input type="hidden" name="_csrf">
+                                <div class="form-group">
+                                    <label>
+                                        Dirección de Correo
+                                    </label>
+                                    <input type="text" name="email" class="form-control"
+                                        placeholder="ejemplo@ejemplo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        Nombre de Usuario
+                                    </label>
+                                    <input type="text" name="username" class="form-control" placeholder="usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        Contraseña
+                                    </label>
+                                    <input type="password" name="password" class="form-control"
+                                        placeholder="4 caracteres mínimo">
+                                </div>
+                                <button class="btn btn-outline-secondary btn-block" type="submit">
+                                    Registrarse
+                                </button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label>
-                                Nombre de Usuario
-                            </label>
-                            <input type="text" name="username" class="form-control" placeholder="usuario">
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                Contraseña
-                            </label>
-                            <input type="password" name="password" class="form-control"
-                                placeholder="4 caracteres mínimo">
-                        </div>
-                        <button class="btn btn-outline-secondary btn-block" type="submit">
-                            Registrarse
-                        </button>
-                    </form>
+                    </div>
+                </div>
+                <div class="col-md">
+                    Intro
                 </div>
             </div>
         </div>
