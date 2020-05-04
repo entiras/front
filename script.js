@@ -52,15 +52,19 @@ content.view = function () {
     switch (route) {
         case '/':
             $('#home').removeClass('d-none');
+            $('title').append(' - Raíz');
             break;
         case '/signup':
             $('#signup').removeClass('d-none');
+            $('title').append(' - Registro');
             break;
         case '/login':
             $('#login').removeClass('d-none');
+            $('title').append(' - Entrar');
             break;
         default:
             $('#notfound').removeClass('d-none');
+            $('title').append(' - Error');
     }
 }
 $(document).ready(function () {
