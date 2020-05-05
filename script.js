@@ -67,6 +67,12 @@ content.view = function () {
             $('title').append(' - Error');
     }
 }
+// actions
+var actions = {};
+actions.signup = function () {
+    console.log('signup');
+    console.log($('#signup-form').serializeArray());
+};
 $(document).ready(function () {
     loader.show();
     login.check();

@@ -58,7 +58,7 @@
             </div>
         </div>
         <div id="signup" class="d-none">
-            <div class="row">
+            <div class="row d-none animated fadeIn faster guest">
                 <div class="col-lg text-center">
                     <span class="h1 h-entiras">
                         Registro
@@ -66,11 +66,11 @@
                 </div>
                 <div class="col-lg"></div>
             </div>
-            <div class="row mt-2">
+            <div class="row mt-2 d-none animated fadeIn faster guest">
                 <div class="col-lg mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/api/login" method="POST">
+                            <form id="signup-form">
                                 <input type="hidden" name="_csrf">
                                 <div class="form-group">
                                     <label>
@@ -92,7 +92,7 @@
                                     <input type="password" name="password" class="form-control"
                                         placeholder="4 caracteres mínimo">
                                 </div>
-                                <button class="btn btn-outline-secondary btn-block" type="submit">
+                                <button class="btn btn-outline-secondary btn-block" onclick="actions.signup">
                                     Registrarse
                                 </button>
                             </form>

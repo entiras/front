@@ -47,6 +47,7 @@ a, a:hover {
 }
 .h-entiras {
   font-family: 'desyrelregular' !important;
+  font-weight: bold;
 }
 .big {
   font-size: 10rem;
