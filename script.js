@@ -77,8 +77,8 @@ actions.signup = function () {
         type: 'POST',
         url: 'https://entiras.herokuapp.com/',
         data: data,
-        success: console.log('YAY'),
-        error: console.log('NAY')
+        success: () => console.log('YAY'),
+        error: () => console.log('NAY')
     });
 };
 $(document).ready(function () {
