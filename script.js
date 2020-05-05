@@ -75,6 +75,8 @@ actions.signup = function () {
     $.ajax({
         type: 'POST',
         url: 'https://entiras.herokuapp.com/',
+        processData: false,
+        contentType: false,
         data: data,
         success: () => console.log('YAY'),
         error: () => console.log('NAY')
