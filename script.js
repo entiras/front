@@ -71,7 +71,7 @@ content.view = function () {
 // actions
 var actions = {};
 actions.signup = function () {
-    var data = new FormData($('#signup-form')[0]);
+    var data = $('#signup-form').serializeArray();
     console.log(data);
     $.ajax({
         type: 'POST',
