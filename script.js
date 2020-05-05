@@ -49,29 +49,37 @@ content.guest = function () {
 content.view = function () {
     var url = new URL(window.location.href);
     var route = url.pathname;
+    $('title').append(' - ');
     switch (route) {
         case '/':
             $('#home').removeClass('d-none');
-            $('title').append(' - Raíz');
+            $('title').append('Raíz');
             break;
         case '/signup':
             $('#signup').removeClass('d-none');
-            $('title').append(' - Registro');
+            $('title').append('Registro');
             break;
         case '/login':
             $('#login').removeClass('d-none');
-            $('title').append(' - Entrar');
+            $('title').append('Entrar');
             break;
         default:
             $('#notfound').removeClass('d-none');
-            $('title').append(' - Error');
+            $('title').append('Error');
     }
 }
 // actions
 var actions = {};
 actions.signup = function () {
-    console.log('signup');
-    console.log($('#signup-form').serializeArray());
+    var data = $('#signup-form').serializeObject();
+    console.log(data);
+    $.ajax({
+        type: 'POST',
+        url: 'https://entiras.herokuapp.com/',
+        data: data,
+        success: console.log('YAY'),
+        error: console.log('NAY')
+    });
 };
 $(document).ready(function () {
     loader.show();
