@@ -71,8 +71,7 @@ content.view = function () {
 // actions
 var actions = {};
 actions.signup = function () {
-    var data = $('#signup-form').serializeArray();
-    console.log(data);
+    var data = new FormData($('#signup-form')[0]);
     $.ajax({
         type: 'POST',
         url: 'https://entiras.herokuapp.com/',
