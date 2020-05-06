@@ -79,20 +79,21 @@ actions.csrf = function (callback) {
     });
 };
 actions.signup = function (data) {
-    if (typeof data !== "object") {
+    if (typeof data !== 'object') {
         actions.csrf(actions.signup);
-    } else {
+    } else if (typeof data.token === 'string') {
         $('input[name=_csrf]').val(data.token);
-        console.log(data);
         $.ajax({
             type: 'GET',
             url: 'https://entiras.herokuapp.com/',
             processData: false,
             contentType: false,
             data: new FormData($('#signup-form')[0]),
-            success: callback,
+            success: actions.signup,
             error: actions.failed
         });
+    } else {
+        console.log(data);
     }
 };
 $(document).ready(function () {
