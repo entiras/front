@@ -82,7 +82,7 @@ actions.csrf = function (callback) {
     });
 };
 actions.signup = function (data) {
-    if (data === null) {
+    if (data === undefined) {
         actions.csrf();
     } else {
         console.log(data);
