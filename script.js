@@ -22,7 +22,7 @@ login.check = function () {
         type: 'GET',
         url: 'https://entiras.herokuapp.com/',
         success: login.checked,
-        error: login.failed
+        error: actions.failed
     });
 };
 login.checked = function () {
@@ -31,10 +31,6 @@ login.checked = function () {
     } else {
         content.guest();
     }
-};
-login.failed = function () {
-    loader.hide();
-    $('#network-err').removeClass('d-none');
 };
 // show content depending on log and view
 var content = {};
@@ -70,17 +66,28 @@ content.view = function () {
 }
 // actions
 var actions = {};
-actions.signup = function () {
-    var data = new FormData($('#signup-form')[0]);
+actions.failed = function () {
+    loader.hide();
+    $('#network-err').removeClass('d-none');
+};
+actions.csrf = function (callback) {
     $.ajax({
-        type: 'POST',
-        url: 'https://entiras.herokuapp.com/',
+        type: 'GET',
+        url: 'https://entiras.herokuapp.com/csrf',
         processData: false,
         contentType: false,
         data: data,
-        success: () => console.log('YAY'),
-        error: () => console.log('NAY')
+        success: callback,
+        error: actions.failed
     });
+};
+actions.signup = function (data) {
+    if (data === null) {
+        actions.csrf();
+    } else {
+        console.log(data);
+        //var data = new FormData($('#signup-form')[0]);
+    }
 };
 $(document).ready(function () {
     loader.show();
