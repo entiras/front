@@ -74,9 +74,6 @@ actions.csrf = function (callback) {
     $.ajax({
         type: 'GET',
         url: 'https://entiras.herokuapp.com/csrf',
-        processData: false,
-        contentType: false,
-        data: data,
         success: callback,
         error: actions.failed
     });
@@ -85,8 +82,17 @@ actions.signup = function (data) {
     if (typeof data !== "object") {
         actions.csrf(actions.signup);
     } else {
+        $('input[name=_csrf]').val(data.token);
         console.log(data);
-        //var data = new FormData($('#signup-form')[0]);
+        $.ajax({
+            type: 'GET',
+            url: 'https://entiras.herokuapp.com/',
+            processData: false,
+            contentType: false,
+            data: new FormData($('#signup-form')[0]),
+            success: callback,
+            error: actions.failed
+        });
     }
 };
 $(document).ready(function () {
