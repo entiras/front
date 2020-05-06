@@ -82,8 +82,8 @@ actions.csrf = function (callback) {
     });
 };
 actions.signup = function (data) {
-    if (data === undefined) {
-        actions.csrf();
+    if (typeof data !== "object") {
+        actions.csrf(actions.signup);
     } else {
         console.log(data);
         //var data = new FormData($('#signup-form')[0]);
