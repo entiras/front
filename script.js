@@ -78,7 +78,7 @@ actions.csrf = function (callback) {
         error: actions.failed
     });
 };
-actions.signup = function (data) {
+actions.signup = function (data, stat, req) {
     if (typeof data !== 'object') {
         actions.csrf(actions.signup);
     } else if (typeof data.token === 'string') {
@@ -93,7 +93,7 @@ actions.signup = function (data) {
             success: actions.signup,
             error: actions.failed
         });*/
-        var form = new FormData();
+        /*var form = new FormData();
         form.append("_csrf", data.token);
         var settings = {
             "url": "https://entiras.herokuapp.com/signup",
@@ -105,7 +105,9 @@ actions.signup = function (data) {
         };
         $.ajax(settings).done(function (response) {
             console.log(response);
-        });
+        });*/
+        console.log(data);
+        console.log(req);
     } else {
         console.log(data);
     }
