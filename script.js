@@ -82,7 +82,7 @@ actions.signup = function (data) {
     if (typeof data !== 'object') {
         actions.csrf(actions.signup);
     } else if (typeof data.token === 'string') {
-        $('input[name=_csrf]').val(data.token);
+        /*$('input[name=_csrf]').val(data.token);
         var arr = $('#signup-form').serializeArray();
         $.ajax({
             type: 'POST',
@@ -92,6 +92,19 @@ actions.signup = function (data) {
             },
             success: actions.signup,
             error: actions.failed
+        });*/
+        var form = new FormData();
+        form.append("_csrf", data.token);
+        var settings = {
+            "url": "https://entiras.herokuapp.com/signup",
+            "method": "POST",
+            "processData": false,
+            "mimeType": "multipart/form-data",
+            "contentType": false,
+            "data": form
+        };
+        $.ajax(settings).done(function (response) {
+            console.log(response);
         });
     } else {
         console.log(data);
