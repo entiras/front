@@ -107,7 +107,7 @@ actions.signup = function (data, stat, req) {
             console.log(response);
         });*/
         console.log(data);
-        console.log(req);
+        console.log(req.getAllResponseHeaders());
     } else {
         console.log(data);
     }
