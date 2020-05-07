@@ -84,8 +84,8 @@ actions.signup = function (data) {
     } else if (typeof data.token === 'string') {
         $('input[name=_csrf]').val(data.token);
         $.ajax({
-            type: 'GET',
-            url: 'https://entiras.herokuapp.com/',
+            type: 'POST',
+            url: 'https://entiras.herokuapp.com/signup',
             processData: false,
             contentType: false,
             data: new FormData($('#signup-form')[0]),
