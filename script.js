@@ -14,7 +14,7 @@ loader.wait = function () {
         $('#loader').removeClass('d-none');
     }
 }
-// check if logged in
+// check if logged
 var login = {};
 login.logged = false;
 login.check = function () {
@@ -93,20 +93,6 @@ actions.signup = function (data, stat, req) {
             success: actions.signup,
             error: actions.failed
         });
-        /*var form = new FormData();
-        form.append("_csrf", data.token);
-        var settings = {
-            "url": "/api/signup",
-            "method": "POST",
-            "processData": false,
-            "contentType": false,
-            "data": form
-        };
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-        });
-        console.log(data);
-        console.log(req.getAllResponseHeaders());*/
     } else {
         console.log(data);
     }
