@@ -20,7 +20,7 @@ login.logged = false;
 login.check = function () {
     $.ajax({
         type: 'GET',
-        url: 'https://entiras.herokuapp.com/',
+        url: '/api',
         success: login.checked,
         error: actions.failed
     });
@@ -73,7 +73,7 @@ actions.failed = function () {
 actions.csrf = function (callback) {
     $.ajax({
         type: 'GET',
-        url: 'https://entiras.herokuapp.com/csrf',
+        url: '/api/csrf',
         success: callback,
         error: actions.failed
     });
@@ -96,15 +96,10 @@ actions.signup = function (data, stat, req) {
         var form = new FormData();
         form.append("_csrf", data.token);
         var settings = {
-            "url": "https://entiras.herokuapp.com/signup",
+            "url": "/api/signup",
             "method": "POST",
             "processData": false,
-            "mimeType": "multipart/form-data",
             "contentType": false,
-            xhrFields: {
-                withCredentials: true
-            },
-            crossDomain: true,
             "data": form
         };
         $.ajax(settings).done(function (response) {
