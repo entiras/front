@@ -93,7 +93,7 @@ actions.signup = function (data, stat, req) {
             success: actions.signup,
             error: actions.failed
         });*/
-        /*var form = new FormData();
+        var form = new FormData();
         form.append("_csrf", data.token);
         var settings = {
             "url": "https://entiras.herokuapp.com/signup",
@@ -101,11 +101,15 @@ actions.signup = function (data, stat, req) {
             "processData": false,
             "mimeType": "multipart/form-data",
             "contentType": false,
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
             "data": form
         };
         $.ajax(settings).done(function (response) {
             console.log(response);
-        });*/
+        });
         console.log(data);
         console.log(req.getAllResponseHeaders());
     } else {
