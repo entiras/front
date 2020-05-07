@@ -82,18 +82,18 @@ actions.signup = function (data, stat, req) {
     if (typeof data !== 'object') {
         actions.csrf(actions.signup);
     } else if (typeof data.token === 'string') {
-        /*$('input[name=_csrf]').val(data.token);
+        $('input[name=_csrf]').val(data.token);
         var arr = $('#signup-form').serializeArray();
         $.ajax({
             type: 'POST',
-            url: 'https://entiras.herokuapp.com/signup',
+            url: '/api/signup',
             data: {
                 _csrf: arr[0].value
             },
             success: actions.signup,
             error: actions.failed
-        });*/
-        var form = new FormData();
+        });
+        /*var form = new FormData();
         form.append("_csrf", data.token);
         var settings = {
             "url": "/api/signup",
@@ -106,7 +106,7 @@ actions.signup = function (data, stat, req) {
             console.log(response);
         });
         console.log(data);
-        console.log(req.getAllResponseHeaders());
+        console.log(req.getAllResponseHeaders());*/
     } else {
         console.log(data);
     }
