@@ -19,7 +19,7 @@ var login = {};
 login.logged = false;
 login.check = function () {
     var cookie = Cookies.get('user');
-    if (cookie === udefined) {
+    if (cookie === undefined) {
         login.logged = false;
     } else {
         login.logged = true;
